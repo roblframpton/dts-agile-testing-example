@@ -28,7 +28,7 @@ public class IntegrationTests {
         Menu removeItemMenu = mainMenu.chooseOption(2);
         mainMenu = removeItemMenu.chooseOption(1);
 
-        Assert.assertEquals(149, basket.getTotalPrice())
+        Assert.assertEquals(149, basket.getTotalPrice()) //assert
     }
 
     @Test
