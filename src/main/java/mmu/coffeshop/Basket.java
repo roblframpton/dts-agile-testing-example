@@ -12,13 +12,14 @@ public class Basket {
         totalPrice += item.getPrice();
         items.add(item);
     }
-
     public void clear() {
         items.clear();
     }
 
     public Item removeItem(int index) {
-        return items.remove(index);
+        Item removedItem = items.remove(index);
+        totalPrice -= removedItem.getPrice();
+        return removedItem;
     }
 
     public List<Item> getItems() {
